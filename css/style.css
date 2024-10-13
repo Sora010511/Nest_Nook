@@ -1,0 +1,521 @@
+/*----------
+共通
+----------*/
+body {
+    background-color: #2B6B6C;
+    color: #fff;
+    font-family: "游ゴシック体", "YuGothic", "游ゴシック Medium",
+        "Yu Gothic Medium", "游ゴシック", "Yu Gothic", "メイリオ", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+}
+
+img {
+    width: 100%;
+    object-fit: cover;
+}
+
+li {
+    list-style: none;
+}
+
+a {
+    color: #000;
+    text-decoration: none;
+}
+
+.wrapper {
+    padding: 0 4%;
+}
+
+.sec-title {
+    position: relative;
+    font-size: 2.25rem;
+    text-align: center;
+    font-weight: bold;
+    padding: 40px;
+    margin-top: 20px;
+    text-shadow: 5px 3px 0px rgba(246, 244, 244, 0.3);
+}
+
+.sec-title::before {
+    position: absolute;
+    top: calc(50% - 1px);
+    left: 0;
+    width: 100%;
+    height: 2px;
+    content: '';
+    background: #fff;
+}
+
+.sec-title span {
+    position: relative;
+    padding: 0 1em;
+    background: #2B6B6C;
+}
+
+/*----------
+header
+----------*/
+header {
+    width: 100%;
+    position: fixed;
+    z-index: 20;
+}
+
+.menu {
+    width: 100%;
+    font-weight: bold;
+    font-size: 1.75rem;
+    display: flex;
+    justify-content: flex-end;
+    padding: 24px 0;
+    background-color: #2e2121;
+}
+
+.menu li {
+    margin-right: 24px;
+}
+
+.menu li a {
+    color: #fff;
+}
+
+
+/*----------
+content
+----------*/
+.content {
+    width: 100%;
+    min-height: 100vh;
+    background-image: url(../img/mv.jpg);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+.bar {
+    width: 50%;
+    text-align: center;
+    background-color: rgba(0, 0, 0, 0.5);
+    color: #fff;
+    padding: 160px 0;
+}
+
+
+
+.logo {
+    width: 320px;
+    text-align: center;
+    border-radius: 50%;
+    box-shadow: 0px 0px 20px 9px rgba(241, 241, 245, 0.6);
+}
+
+.bar-text {
+    font-size: 1.75rem;
+    font-weight: bold;
+    line-height: 2;
+    margin: 40px 0;
+}
+
+.btn {
+    width: 50%;
+    background-color: #f5f5dc;
+    border: 3px solid #f5f5dc;
+    border-radius: 40px;
+    color: #000;
+    font-size: 24px;
+    font-weight: bold;
+    display: block;
+    padding: 24px;
+    margin: 0 auto;
+    transition: 0.3s;
+}
+
+.btn:hover {
+    background-color: #fff;
+    border: 3px solid #f5f5dc;
+    color: #000;
+    transform: scale(1.05);
+}
+
+/*----------
+ABOUT
+----------*/
+.about {
+    position: relative;
+    margin: 0 auto;
+}
+
+.about-inf {
+    max-width: 1440px;
+    margin: 0 auto;
+    height: auto;
+    display: flex;
+    justify-content: space-between;
+}
+
+.about-text {
+    width: 50%;
+    height: 100%;
+    background-color: #2e2121;
+    padding: 40px;
+    border-radius: 10%;
+}
+.store-name{
+    color: #ff0;
+    font-size: 1.125rem;
+}
+.reason{
+    font-size: 2.0rem;
+    font-weight: bold;
+    padding: 48px 0;
+}
+.reason-text{
+    font-size: 1.125rem;
+    line-height: 2.5;
+}
+.about-visual{    
+    width: 48%;
+    padding-top: 64px;
+}
+.about-visual img{
+    border-radius: 10%;
+}
+.img1{
+    width: 320px;
+    height: 240px;
+    margin-left: 100px;
+    margin-bottom: -32px;
+}
+.img2{
+    width: 450px;
+    position: relative;
+}
+.img3{
+    width: 300px;
+    margin-left: 200px;
+    margin-top: -40px;
+}
+/*----------
+MENU
+----------*/
+.food-menu {
+    max-height: 720px;
+}
+
+.slider li {
+    height: auto;
+    padding: 0 32px;
+}
+
+.name {
+    text-align: center;
+}
+
+.slider img {
+    height: 400px;
+    border-radius: 10%;
+}
+
+.slider img:hover {
+    transform: scale(1.03);
+    border-radius: 10%;
+}
+
+button .slick-next {
+    right: 25px;
+    z-index: 1;
+}
+
+button .slick-prev {
+    left: 25px;
+    z-index: 1;
+}
+
+.slide-arrow {
+    font-size: 0;
+    line-height: 0;
+    position: absolute;
+    top: 50%;
+    display: block;
+    width: 20px;
+    height: 20px;
+    padding: 0;
+    -webkit-transform: translate(0, -50%);
+    -ms-transform: translate(0, -50%);
+    transform: translate(0, -50%);
+    cursor: pointer;
+    color: transparent;
+    border: none;
+    outline: none;
+    background: transparent;
+}
+
+.prev-arrow {
+    left: 25px;
+    z-index: 1;
+}
+
+.next-arrow {
+    right: 25px;
+    z-index: 1;
+}
+
+
+.prev-arrow::before {
+    content: "←";
+    font-family: 'slick';
+    font-size: 20px;
+    line-height: 1;
+    opacity: .75;
+    color: white;
+    -webkit-font-smoothing: antialiased;
+}
+
+
+.next-arrow::before {
+    content: "→";
+    font-family: 'slick';
+    font-size: 20px;
+    line-height: 1;
+    opacity: .75;
+    color: white;
+    -webkit-font-smoothing: antialiased;
+}
+
+
+/*----------
+Q&A
+----------*/
+.qanda {
+    max-width: 1440px;
+    margin: 0 auto;
+    /* border: 1px solid red; */
+}
+
+.content-title {
+    padding-bottom: 16px;
+}
+
+.faq-ttl {
+    position: relative;
+    padding: 15px 9% 15px 15px;
+    cursor: pointer;
+    background-color: #808080;
+    border-bottom: 2px dotted #fff;
+    line-height: 3;
+}
+
+.faq-content {
+    display: none;
+    background-color: #2e2121;
+    line-height: 3;
+    padding: 0 16px;
+}
+
+/* 「+」を追加 */
+.faq-ttl::before,
+.faq-ttl::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    right: 4%;
+    width: 12px;
+    height: 1px;
+    margin: auto;
+    background-color: #000;
+}
+
+.faq-ttl::after {
+    transform: rotate(90deg);
+    transition: .3s;
+}
+
+/* クリックしたときに「+」を「−」に変更 */
+.faq-ttl.is-active::after {
+    transform: rotate(180deg);
+}
+
+
+/*----------
+location
+----------*/
+.location {
+    margin: 0 auto;
+    text-align: center;
+    /* border: 1px solid red; */
+}
+
+.map {
+    width: 100%;
+
+}
+
+iframe {
+    width: 100%;
+}
+
+.location p {
+    font-size: 1.75rem;
+
+}
+
+/*----------
+footer
+----------*/
+footer {
+    text-align: center;
+    padding: 12px 0;
+}
+.sns{
+    display: flex;
+    justify-content: center;
+    padding: 32px 0;
+    /* border: 1px solid red; */
+}
+.sns li{
+    width: 80px;
+    margin: 0 16px;
+}
+
+/*----------
+responsive
+----------*/
+@media(max-width:900px) {
+
+    /* ハンバーガーメニュー */
+    .navi {
+        width: 300px;
+        background-color: #2e2121;
+        padding: 25px;
+        position: fixed;
+        top: 0;
+        left: -300px;
+        bottom: 0;
+        opacity: 0;
+        overflow-y: auto;
+        transition: 0.5s;
+        z-index: 20;
+
+    }
+
+    .menu {
+        display: block;
+        background-color: transparent;
+    }
+
+    .menu li {
+        margin-bottom: 16px;
+    }
+
+    .open .navi {
+        left: 0;
+        opacity: 1;
+    }
+
+    .navi ul.nav-menu {
+        margin-bottom: 30px;
+    }
+
+    .navi ul li {
+        padding: 10px 0;
+    }
+
+    .hamburger {
+        width: 30px;
+        height: 30px;
+        cursor: pointer;
+        position: fixed;
+        top: 22px;
+        right: 18px;
+        transition: 0.5s;
+        z-index: 20;
+    }
+
+    .hamburger span {
+        width: 30px;
+        height: 2px;
+        background-color: #fff;
+        border-radius: 4px;
+        display: block;
+        position: absolute;
+        left: 0;
+        transition: 0.5s;
+    }
+
+    .hamburger span:nth-child(1) {
+        top: 4px;
+    }
+
+    .hamburger span:nth-child(2) {
+        top: 14px;
+    }
+
+    .hamburger span:nth-child(3) {
+        bottom: 4px;
+    }
+
+    .open .hamburger span {
+        background-color: #fff;
+    }
+
+    .open .hamburger span:nth-child(1) {
+        transform: translateY(10px) rotate(-45deg);
+    }
+
+    .open .hamburger span:nth-child(2) {
+        opacity: 0;
+    }
+
+    .open .hamburger span:nth-child(3) {
+        transform: translateY(-10px) rotate(45deg);
+    }
+
+    .open .mask {
+        width: 100%;
+        height: 100%;
+        background-color: #000;
+        cursor: pointer;
+        display: block;
+        opacity: 0.8;
+        position: fixed;
+        top: 0;
+        left: 0;
+        z-index: 10;
+    }
+
+    /* content */
+    .bar {
+        width: 100%;
+    }
+
+    /* about */
+    .about-inf {
+        flex-direction: column;
+    
+    }
+    .about-text{
+        width: 100%;
+    }
+    .reason-text{
+        line-height: 1.3;
+    }
+    .about-visual{
+        width: 100%;
+    }
+    .img1{
+        margin-left: 80px;
+    }
+    .img2{
+        width: 100%;
+    }
+    .img3{
+        margin-left: 80px;
+    }
+    /* food-menu */
+    .slider img {
+        height: 250px;
+    }
+}
